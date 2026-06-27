@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@unocss/nuxt'],
+  modules: ['nuxt-directus', '@nuxt/content', '@unocss/nuxt'],
   vite: {
     optimizeDeps: {
       include: [
@@ -10,6 +10,9 @@ export default defineNuxtConfig({
         '@vue/devtools-kit',
       ]
     }
+  },
+  directus: {
+    url: process.env.DIRECTUS_URL
   }
 })
 
