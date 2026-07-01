@@ -3,7 +3,6 @@
     <ul>
       <li><NuxtLink to="/">Home</NuxtLink></li>
       <li><a href="/portfolio">Portfolio</a></li>
-      <li><NuxtLink to="/contact">Contact</NuxtLink></li>
     </ul>
   </nav>
 </template>
