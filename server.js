@@ -18,9 +18,7 @@ async function getPortfolioFile() {
 
 // root route
 app.get("/", async (req, res) => {
-  const file = await getPortfolioFile();
-  if (!file) return res.status(404).send("No portfolio");
-  res.redirect(`${DIRECTUS_URL}/assets/${file}`);
+  res.redirect("/portfolio");
 });
 
 // explicit portfolio route
