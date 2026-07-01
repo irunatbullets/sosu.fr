@@ -1,8 +1,16 @@
 services:
-  sosu_frontend:
+  sosu-frontend:
     build: .
-    container_name: sosu_frontend
-    restart: unless-stopped
     ports:
-      - "127.0.0.1:3000:3000"
+      - "3000:3000"
+    container_name: sosu-frontend
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
 

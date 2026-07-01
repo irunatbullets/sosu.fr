@@ -1,15 +1,13 @@
-FROM node:24-slim
+FROM node:22-alpine
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci
+RUN npm ci --omit=dev
 
 COPY . .
 
-RUN npm run build
-
 EXPOSE 3000
 
-CMD ["node", ".output/server/index.mjs"]
+CMD ["node", "server.js"]
 

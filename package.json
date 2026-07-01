@@ -1,21 +1,5 @@
 {
-  "name": "sosu",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
   "dependencies": {
-    "@nuxt/content": "^3.14.0",
-    "@unocss/nuxt": "^66.7.2",
-    "better-sqlite3": "^12.11.1",
-    "nuxt": "^4.4.8",
-    "nuxt-directus": "^5.7.0",
-    "vue": "^3.5.38",
-    "vue-router": "^5.1.0"
+    "express": "^5.2.1"
   }
 }
