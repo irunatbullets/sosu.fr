@@ -28,5 +28,13 @@ app.get("/portfolio", async (req, res) => {
   res.redirect(`${DIRECTUS_URL}/assets/${file}`);
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    uptime: process.uptime(),
+    timestamp: Date.now(),
+  });
+});
+
 app.listen(3000);
 
