@@ -21,6 +21,11 @@ app.get("/", async (req, res) => {
   res.redirect("/portfolio");
 });
 
+// weird ionos route
+app.get("/defaultsite", async (req, res) => {
+  res.redirect("/portfolio");
+});
+
 // explicit portfolio route
 app.get("/portfolio", async (req, res) => {
   const file = await getPortfolioFile();
